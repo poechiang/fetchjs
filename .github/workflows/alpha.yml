@@ -21,7 +21,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           target-branch: ${{ github.ref_name }}
           release-type: node
-          skip-github-release: true
 
       # Checkout
       - uses: actions/checkout@v3
