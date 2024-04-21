@@ -18,7 +18,6 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          target-branch: ${{ github.ref_name }}
           release-type: node
 
       # Checkout

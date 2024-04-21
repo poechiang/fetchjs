@@ -10,3 +10,8 @@
 [![rc](https://github.com/poechiang/fetchjs/actions/workflows/rc.yml/badge.svg)](https://github.com/poechiang/fetchjs/actions/workflows/rc.yml)
 
 update docs
+update docs
+update docs
+update docs
+update docs
+update docs
