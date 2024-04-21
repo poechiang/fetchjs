@@ -30,7 +30,7 @@ export type FetchMethod = <T = any>(
   url: string,
   params?: FetchParams,
   options?: FetchConfig
-) => Promise<any>;
+) => Promise<T>;
 export type FetchPostMethod = FetchMethod;
 export type FetchPutMethod = FetchMethod;
 export type FetchHeadMethod = FetchMethod;
