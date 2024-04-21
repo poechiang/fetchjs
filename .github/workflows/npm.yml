@@ -1,5 +1,5 @@
 #
-name: Release to NPM
+name: NPM
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: '@jeffchi/react-pkg'
+          package-name: "@jeffchi/react-pkg"
           bump-patch-for-minor-pre-major: true
           default-branch: main
 
@@ -26,8 +26,8 @@ jobs:
       # Setup node
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
         if: ${{ steps.release.outputs.release_created }}
 
       # Install dependencies

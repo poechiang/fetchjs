@@ -1,5 +1,5 @@
 # 生成 git release
-name: Git Release
+name: Release
 on:
   push:
     branches:
@@ -16,6 +16,6 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: '@jeffchi/react-pkg'
+          package-name: "@jeffchi/react-pkg"
           bump-patch-for-minor-pre-major: true
           default-branch: release

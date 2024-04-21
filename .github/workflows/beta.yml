@@ -7,7 +7,7 @@ permissions:
   contents: write
   pull-requests: write
 
-name: release-please-beta
+name: beta
 env:
   ACTION_NAME: release-please-action
 jobs:
@@ -30,8 +30,8 @@ jobs:
       # Setup node
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
-          registry-url: 'https://registry.npmjs.org'
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
         if: ${{ steps.release.outputs.release_created }}
 
       # Install dependencies
