@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.0-alpha.0](https://github.com/poechiang/fetchjs/compare/v1.0.1-alpha.0...v1.1.0-alpha.0) (2024-04-21)
+
+
+### Features
+
+* add interface file ([7832303](https://github.com/poechiang/fetchjs/commit/78323033fed21fc5126908d31f03d84411f2dc74))
+
+
+### Bug Fixes
+
+* fix the interface ([2c0436d](https://github.com/poechiang/fetchjs/commit/2c0436d5b13fbfcb73b01c9919e1dcf7deee8a34))
+* fix the interface ([444d6d2](https://github.com/poechiang/fetchjs/commit/444d6d2e63034a8faa1f943096b0bc7f6c400392))
+* fix 无法找到模块 ([3704fca](https://github.com/poechiang/fetchjs/commit/3704fca35de704be2006c62698b608e662c99700))
+* fix 无法找到模块 ([e4dfe2e](https://github.com/poechiang/fetchjs/commit/e4dfe2e7f3de0daadc67220e8efcecd693d11a73))
+* fix 无法找到模块 ([29e9f8f](https://github.com/poechiang/fetchjs/commit/29e9f8f53f92014c1dd9b49de01e3a55e164bfe3))
+* remove d.ts ([6050153](https://github.com/poechiang/fetchjs/commit/60501535c59f610fc58d088f3345fbfc4cfdef89))
+* remove yml skip github release option ([802fccb](https://github.com/poechiang/fetchjs/commit/802fccb35ac7580718d786381ecd87f7c6440df8))
+
 ## [1.1.0](https://github.com/poechiang/fetchjs/compare/v1.0.0...v1.1.0) (2024-04-21)
 
 
