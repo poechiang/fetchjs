@@ -1,0 +1,48 @@
+{
+  "name": "fetchjs",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "packageManager": "yarn@4.0.2",
+  "types": "./dist/index.d.ts",
+  "description": "对fetch api 封装",
+  "keywords": [
+    "fetch",
+    "web",
+    "node"
+  ],
+  "author": "jeffrey·chiang",
+  "git": "https://github.com/poechiang/fetchjs.git",
+  "homepage": "https://github.com/poechiang/fetchjs#readme",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "start": "npm run storybook & npm run dev",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./themes/*": {
+      "import": "./dist/**/*.less"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "eslint": "^9.1.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-plugin-dts": "^3.8.3"
+  }
+}

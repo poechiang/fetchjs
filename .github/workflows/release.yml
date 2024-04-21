@@ -1,0 +1,21 @@
+# 生成 git release
+name: Git Release
+on:
+  push:
+    branches:
+      - release
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: '@jeffchi/react-pkg'
+          bump-patch-for-minor-pre-major: true
+          default-branch: release
