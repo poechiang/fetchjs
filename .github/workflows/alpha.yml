@@ -23,6 +23,7 @@ jobs:
           release-type: node
           # config-file: releases/release-please-config-alpha.json
           # manifest-file: releases/.release-please-manifest-alpha.json
+          skip-github-release: true
 
       # Checkout
       - uses: actions/checkout@v3
