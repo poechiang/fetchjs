@@ -1,4 +1,5 @@
 import { isUndefined, pickBy } from "lodash";
+import { FetchParams } from "./interface";
 
 /**
  * 生成完整的url

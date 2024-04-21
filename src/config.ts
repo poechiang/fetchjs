@@ -1,3 +1,5 @@
+import { FetchConfig } from "./interface";
+
 const configData: Record<string, FetchConfig> = {
   default: {
     domain: "http://localhost",

@@ -1,4 +1,10 @@
 import { config } from "./config";
+import {
+  FetchConfig,
+  FetchConfigMethods,
+  FetchParams,
+  IFectch,
+} from "./interface";
 
 import { parseUrl } from "./parseUrl";
 export * from "./config";
@@ -64,7 +70,7 @@ const buildFetchActionWithConfig =
           method === "GET" ? null : JSON.stringify(params),
           options
         );
-        return onPostProcessing<T>(data, options);
+        return onPostProcessing<T>(data, options ?? {});
       } catch (e: any) {
         throw e;
       }
