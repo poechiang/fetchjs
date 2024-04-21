@@ -2,10 +2,10 @@
   "name": "@jeffchi/fetchjs",
   "version": "1.3.0",
   "type": "module",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
   "packageManager": "yarn@4.0.2",
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "description": "对fetch api 封装",
   "keywords": [
     "fetch",
@@ -32,7 +32,8 @@
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "devDependencies": {
