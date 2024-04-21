@@ -1,5 +1,5 @@
 {
-  "name": "fetchjs",
+  "name": "@jeffchi/fetchjs",
   "version": "0.0.0",
   "type": "module",
   "main": "./dist/index.umd.js",
@@ -33,16 +33,17 @@
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
-    },
-    "./themes/*": {
-      "import": "./dist/**/*.less"
     }
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.0",
     "@types/node": "^20.12.7",
     "eslint": "^9.1.0",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
     "vite-plugin-dts": "^3.8.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
