@@ -58,5 +58,5 @@ jobs:
           git push origin ${{ github.ref_name }} --follow-tags
           npm publish --tag rc
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_SECRET}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
