@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "@jeffchi/fetchjs",
   "version": "0.0.0",
-=======
-  "name": "fetchjs",
-  "version": "1.0.0",
->>>>>>> b988da9 (chore(release/v1-alpha): release 1.0.0)
   "type": "module",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
