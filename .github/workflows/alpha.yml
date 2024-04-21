@@ -53,6 +53,8 @@ jobs:
           git add -A
           git commit -m "chore(release please): version ${{ steps.release.outputs.version }} [skip ci]"
           npm version prerelease --preid alpha
+          git add -A
+          git commit -m "chore(release please): version ${{ steps.release.outputs.version }} [skip ci]2"
           git push origin ${{ github.ref_name }} --follow-tags
           npm publish --tag alpha
         env:
