@@ -5,6 +5,7 @@ declare type FetchConfigMethods =
   | "DELETE"
   | "HEAD"
   | "OPTIONS";
+declare type LooseObject<T = any> = Record<string, T>;
 declare interface FetchConfig {
   domain?: string;
   port?: number;
@@ -24,12 +25,12 @@ declare interface FetchConfig {
 }
 
 declare type FetchParams = Partial<Record<string, LooseObject> | null>;
-declare type FetchUrl = string | IFetchUrl;
+declare type FetchUrl = string;
 declare type FetchMethod = <T = any>(
   url: string,
   params?: FetchParams,
   options?: FetchConfig
-) => Promise<IFetchResult<T>>;
+) => Promise<any>;
 declare type FetchPostMethod = FetchMethod;
 declare type FetchPutMethod = FetchMethod;
 declare type FetchHeadMethod = FetchMethod;
