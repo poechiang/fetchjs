@@ -2,11 +2,12 @@ on:
   push:
     branches:
       - release/*-alpha
+  workflow_dispatch:
 permissions:
   contents: write
   pull-requests: write
 
-name: alpha
+name: release-please-alpha
 env:
   ACTION_NAME: release-please-action
 jobs:
@@ -18,7 +19,10 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: ${{ github.ref_name }}
           release-type: node
+          # config-file: releases/release-please-config-alpha.json
+          # manifest-file: releases/.release-please-manifest-alpha.json
 
       # Checkout
       - uses: actions/checkout@v3

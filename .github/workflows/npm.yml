@@ -16,7 +16,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: "@jeffchi/react-pkg"
+          package-name: "@jeffchi/fetchjs"
           bump-patch-for-minor-pre-major: true
           default-branch: main
 

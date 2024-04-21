@@ -7,7 +7,7 @@ permissions:
   contents: write
   pull-requests: write
 
-name: beta
+name: release-please-beta
 env:
   ACTION_NAME: release-please-action
 jobs:
@@ -19,6 +19,7 @@ jobs:
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          target-branch: ${{ github.ref_name }}
           release-type: node
           # config-file: releases/release-please-config.json
           # manifest-file: releases/.release-please-manifest.json
