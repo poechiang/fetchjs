@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/poechiang/fetchjs/compare/v1.2.0...v1.3.0) (2024-04-21)
+
+
+### Features
+
+* update git action workflows ([5577104](https://github.com/poechiang/fetchjs/commit/55771044eb1f0ad395d8b98e9ef8d2de47baf78e))
+
+
+### Bug Fixes
+
+* update readme ([40c1614](https://github.com/poechiang/fetchjs/commit/40c161443c225d3db4f7610d440f6ec9161cab47))
+* update readme ([00230a0](https://github.com/poechiang/fetchjs/commit/00230a049e88cf380abc33045c9fb3a1409b8fd9))
+* update readme ([1452cb0](https://github.com/poechiang/fetchjs/commit/1452cb096eb83166f35682714e8140b09c6503ae))
+
 ## [1.2.0](https://github.com/poechiang/fetchjs/compare/v1.1.0...v1.2.0) (2024-04-21)
 
 
