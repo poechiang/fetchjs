@@ -1,38 +1,19 @@
-import { isUndefined, pickBy } from "lodash";
-import { FetchParams } from "./interface";
+import { FetchParams } from './interface';
+import { pick } from './utils';
 
-/**
- * 生成完整的url
- * @param url 请求url
- * @param query 请求参数
- * @returns 生成的新url
- * @example
- *  const url="api/v1/users?uid=1";
- *  const query = {sortBy='createTime',sortOrder='DESC'};
- *  const fullUrl = parseFullUrl(url,query);
- *  console.log(fullUrl); // out:'api/v1/users?uid=1&sortBy=createTime&sortOrder=DESC"
- */
-export const parseUrl = (url: string, params?: FetchParams) => {
-  const [path, query = ""] = url.split("?");
+/** 解析URL */
+export const parseUrl = (url: string, query?: FetchParams) => {
+  const [path, queryStr = ''] = url.split('?');
 
-  const queryObj = pickBy(
-    {
-      ...(params || {}),
-      ...query.split("&").reduce((o, s) => {
-        const [k, v] = s.split("=");
-        return v ? { ...o, [k]: v } : o;
-      }, {}),
-    },
-    (v: any) => !isUndefined(v) && v !== null && v.length !== 0
-  );
+  const querySegments = queryStr.split('&').reduce((o, s) => {
+    const [k, v] = s.split('=');
+    return v ? { ...o, [k]: v } : o;
+  }, {});
+  const queryObj = pick({ ...(query || {}), ...querySegments });
 
-  const queryStr = Object.entries(queryObj)
+  const newQueryStr = Object.entries(queryObj)
     .map(([k, v]) => `${k}=${v}`)
-    .join("&");
+    .join('&');
 
-  if (queryStr) {
-    return `${path}?${queryStr}`;
-  } else {
-    return path;
-  }
+  return [path, newQueryStr].join('&');
 };

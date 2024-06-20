@@ -1,10 +1,4 @@
-export type FetchConfigMethods =
-  | "GET"
-  | "POST"
-  | "PUT"
-  | "DELETE"
-  | "HEAD"
-  | "OPTIONS";
+export type FetchMethods = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'OPTIONS';
 export type LooseObject<T = any> = Record<string, T>;
 export interface FetchConfig {
   domain?: string;
@@ -12,7 +6,7 @@ export interface FetchConfig {
   https?: boolean;
   path?: string;
   mode?: RequestMode;
-  method?: FetchConfigMethods;
+  method?: FetchMethods;
   credentials?: RequestCredentials;
   headers?: Record<string, string>;
   cache?: RequestCache;
@@ -26,11 +20,7 @@ export interface FetchConfig {
 
 export type FetchParams = Partial<Record<string, LooseObject> | null>;
 export type FetchUrl = string;
-export type FetchMethod = <T = any>(
-  url: string,
-  params?: FetchParams,
-  options?: FetchConfig
-) => Promise<T>;
+type FetchMethod = <T = any>(url: string, params?: FetchParams, options?: FetchConfig) => Promise<T>;
 export type FetchPostMethod = FetchMethod;
 export type FetchPutMethod = FetchMethod;
 export type FetchHeadMethod = FetchMethod;
